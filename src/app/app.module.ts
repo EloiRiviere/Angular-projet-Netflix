@@ -3,10 +3,10 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HeaderComponent } from './shared/ui/header/header.component';
-import { FooterComponent } from './shared/ui/footer/footer.component';
-import { HomeComponent } from './home/home.component';
-import { FilmComponent } from './film/film.component';
+import { HeaderComponent } from './components/header/header.component';
+import { FooterComponent } from './components/footer/footer.component';
+import { HomeComponent } from './components/home/home.component';
+import { FilmComponent } from './components/film/film.component';
 
 @NgModule({
   declarations: [
