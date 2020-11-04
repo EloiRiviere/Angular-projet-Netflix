@@ -1,2 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
 @import "~bulma/css/bulma.css";
+
+// $color-navbar:#141414;
+// .navbar{color:$color-navbar !important}
+.navbar-item{
+    font-family: Netflix Sans, Helvetica,Arial,sans-serif;
+    color: #ffffff;
+    font-size: 14px;
+}
