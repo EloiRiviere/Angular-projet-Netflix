@@ -26,7 +26,7 @@ import {VgBufferingModule} from '@videogular/ngx-videogular/buffering';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    IvyCarouselModule
+    IvyCarouselModule,
     VgCoreModule,
     VgControlsModule,
     VgOverlayPlayModule,
