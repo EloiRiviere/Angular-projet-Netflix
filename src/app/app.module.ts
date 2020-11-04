@@ -7,6 +7,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { HomeComponent } from './components/home/home.component';
 import { FilmComponent } from './components/film/film.component';
+import { CarouselComponent } from './components/carousel/carousel.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { FilmComponent } from './components/film/film.component';
     HeaderComponent,
     FooterComponent,
     HomeComponent,
-    FilmComponent
+    FilmComponent,
+    CarouselComponent
   ],
   imports: [
     BrowserModule,
