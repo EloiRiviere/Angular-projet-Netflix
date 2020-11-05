@@ -7,9 +7,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FooterComponent implements OnInit {
 
+  CodeServiceText: string = 'Code de service';
+
   constructor() { }
+
+  CodeService() {
+    this.CodeServiceText = '901 250'
+  }
 
   ngOnInit(): void {
   }
-
 }
+// let BtCodeService = document.querySelector('BtCodeService');
+
+// BtCodeService.addEventListener('click', () => {
+//    BtCodeService.innerText = '901 050';
+//  }) 
