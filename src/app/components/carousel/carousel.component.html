@@ -1,4 +1,21 @@
-<carousel>
+<!--Problème de rechargement des premières images en loop-->
+<carousel [loop]="true" [dots]="false" [arrows]="true" [arrowsOutside]="false" [counter]="false" [cellsToScroll]=3
+  [cellsToShow]=9 [overflowCellsLimit]=9> <!--[arrowsTheme]="dark"-->
+  <div class="carousel-cell">
+    <img src="./assets/netflix-icon.svg">
+  </div>
+  <div class="carousel-cell">
+    <img src="./assets/netflix.svg">
+  </div>
+  <div class="carousel-cell">
+    <img src="./assets/netflix.jpg">
+  </div>
+  <div class="carousel-cell">
+    <img src="./assets/netflix.jpg">
+  </div>
+  <div class="carousel-cell">
+    <img src="./assets/netflix.svg">
+  </div>
   <div class="carousel-cell">
     <img src="./assets/netflix-icon.svg">
   </div>
@@ -12,16 +29,7 @@
     <img src="./assets/netflix.jpg">
   </div>
   <div class="carousel-cell">
-    <img src="./assets/netflix-icon.svg">
-  </div>
-  <div class="carousel-cell">
-    <img src="./assets/netflix-icon.svg">
-  </div>
-  <div class="carousel-cell">
     <img src="./assets/netflix.svg">
-  </div>
-  <div class="carousel-cell">
-    <img src="./assets/netflix.jpg">
   </div>
   <div class="carousel-cell">
     <img src="./assets/netflix-icon.svg">
