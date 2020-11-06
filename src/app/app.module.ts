@@ -31,7 +31,7 @@ import {HttpClientModule} from '@angular/common/http';
     VgCoreModule,
     VgControlsModule,
     VgOverlayPlayModule,
-    VgBufferingModule
+    VgBufferingModule,
     HttpClientModule
   ],
   providers: [],
