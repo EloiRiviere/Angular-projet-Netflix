@@ -9,6 +9,7 @@ import { HomeComponent } from './components/home/home.component';
 import { FilmComponent } from './components/film/film.component';
 import { CarouselComponent } from './components/carousel/carousel.component';
 import {IvyCarouselModule} from 'angular-responsive-carousel';
+import {HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import {IvyCarouselModule} from 'angular-responsive-carousel';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    IvyCarouselModule
+    IvyCarouselModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
