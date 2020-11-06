@@ -1,3 +1,16 @@
 @import "//cdnjs.cloudflare.com/ajax/libs/bulma/0.7.4/css/bulma.min.css";
 @import "https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.4/dist/css/bulma-carousel.min.css";
 @import "~bulma-carousel/dist/css/bulma-carousel.min.css";
+@import "/src/styles.scss";
+
+carousel {
+    background-color: $netflix-black;
+}
+
+// .carousel-arrow {
+//     background-color: $netflix-red !important;
+// }
+
+// [_nghost-iyc-c16] .carousel-arrow[_ngcontent-iyc-c16] {
+//     background-color: $netflix-red !important;
+// }
