@@ -1,4 +1,7 @@
 import {Component, Input, OnInit} from '@angular/core';
+import {NgbModal, NgbModalRef} from '@ng-bootstrap/ng-bootstrap';
+import {environment} from '../../../environments/environment';
+
 
 @Component({
   selector: 'app-carousel',
@@ -8,10 +11,24 @@ import {Component, Input, OnInit} from '@angular/core';
 export class CarouselComponent implements OnInit {
 
   @Input() listFilm;
+  tmpFilm;
 
-  constructor() { }
+  environment = environment;
+  isModalActive: boolean = false;
+
+
+  constructor(private modalService: NgbModal) { }
 
   ngOnInit(): void {
   }
 
+  toggleModal() {
+    this.isModalActive = !this.isModalActive;
+  }
+
+  clickImage(film) {
+    console.log(film);
+    this.tmpFilm = film;
+    this.toggleModal();
+  }
 }
