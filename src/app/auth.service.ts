@@ -7,10 +7,9 @@ import { User } from './users/components/user/user.model';
 @Injectable({
     providedIn : 'root'
 })
-
 export class AuthService {
-    user : Observable<User>;
-    constructor(private afAuth : AngularFireAuth){ }      
+    user: Observable<User>;
+    constructor(private afAuth: AngularFireAuth){ }
 
     login(){
         this.afAuth.signInWithRedirect(new firebase.default.auth.GoogleAuthProvider());
