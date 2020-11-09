@@ -21,7 +21,6 @@
     "@angular/platform-browser-dynamic": "~10.2.0",
     "@angular/router": "~10.2.0",
     "@ng-bootstrap/ng-bootstrap": "^8.0.0",
-    "@videogular/ngx-videogular": "^2.1.0",
     "angular-responsive-carousel": "^1.5.11",
     "boostrap": "^2.0.0",
     "bootstrap": "^4.5.0",

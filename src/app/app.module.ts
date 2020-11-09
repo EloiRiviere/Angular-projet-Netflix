@@ -9,10 +9,6 @@ import { HomeComponent } from './components/home/home.component';
 import { FilmComponent } from './components/film/film.component';
 import { CarouselComponent } from './components/carousel/carousel.component';
 import {IvyCarouselModule} from 'angular-responsive-carousel';
-import {VgCoreModule} from '@videogular/ngx-videogular/core';
-import {VgControlsModule} from '@videogular/ngx-videogular/controls';
-import {VgOverlayPlayModule} from '@videogular/ngx-videogular/overlay-play';
-import {VgBufferingModule} from '@videogular/ngx-videogular/buffering';
 import {HttpClientModule} from '@angular/common/http';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import {SafePipe} from './model/safePipe';
@@ -31,10 +27,6 @@ import {SafePipe} from './model/safePipe';
     BrowserModule,
     AppRoutingModule,
     IvyCarouselModule,
-    VgCoreModule,
-    VgControlsModule,
-    VgOverlayPlayModule,
-    VgBufferingModule,
     HttpClientModule,
     NgbModule
   ],
