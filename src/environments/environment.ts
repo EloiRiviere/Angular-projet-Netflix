@@ -6,6 +6,7 @@ import firebase from 'firebase';
 
 export const environment = {
   production: false,
+<<<<<<< HEAD
   firebase : {
     apiKey: "AIzaSyDJR8SxMR6cfAj0M-K2WG6lG2gVI_cHHRo",
     authDomain: "login-test-7a44e.firebaseapp.com",
@@ -16,6 +17,9 @@ export const environment = {
     appId: "1:942154828666:web:681fbbc9f9f868a96c64c3",
     measurementId: "G-EMFF5VQRNY"
   }
+=======
+  imgSmallUrl: 'https://image.tmdb.org/t/p/w500',
+>>>>>>> origin/commun
 };
 
 /*

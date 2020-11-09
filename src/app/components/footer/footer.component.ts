@@ -7,9 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FooterComponent implements OnInit {
 
+  CodeServiceText: string = 'Code de service';
+
   constructor() { }
 
   ngOnInit(): void {
   }
-
+  
+  ChangeText(){
+    document.getElementById("BtCodeService").innerText = "901 450";
+  }
 }
+

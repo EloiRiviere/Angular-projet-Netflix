@@ -10,10 +10,9 @@ import { FilmComponent } from './components/film/film.component';
 import { CarouselComponent } from './components/carousel/carousel.component';
 
 import {IvyCarouselModule} from 'angular-responsive-carousel';
-import {VgCoreModule} from '@videogular/ngx-videogular/core';
-import {VgControlsModule} from '@videogular/ngx-videogular/controls';
-import {VgOverlayPlayModule} from '@videogular/ngx-videogular/overlay-play';
-import {VgBufferingModule} from '@videogular/ngx-videogular/buffering';
+import {HttpClientModule} from '@angular/common/http';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import {SafePipe} from './model/safePipe';
 
 import { AngularFireModule } from '@angular/fire';
 import { AngularFireDatabaseModule } from '@angular/fire/database';
@@ -30,12 +29,17 @@ import { LoginComponent } from './components/login/login.component';
     HomeComponent,
     FilmComponent,
     CarouselComponent,
+<<<<<<< HEAD
     LoginComponent
+=======
+    SafePipe
+>>>>>>> origin/commun
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     IvyCarouselModule,
+<<<<<<< HEAD
     VgCoreModule,
     VgControlsModule,
     VgOverlayPlayModule,
@@ -44,6 +48,10 @@ import { LoginComponent } from './components/login/login.component';
     AngularFireDatabaseModule,
     AngularFireAuthModule,
     FormsModule
+=======
+    HttpClientModule,
+    NgbModule
+>>>>>>> origin/commun
   ],
   providers: [],
   bootstrap: [AppComponent]

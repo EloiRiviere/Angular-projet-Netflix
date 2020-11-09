@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {FilmService} from '../../services/film.service';
+import {Discover} from '../../model/film';
 
 @Component({
   selector: 'app-home',
@@ -7,9 +9,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  listFilmDiscover;
+
+  constructor(private filmService: FilmService) { }
 
   ngOnInit(): void {
+    this.discover();
+  }
+
+  discover() {
+    this.filmService.discover().subscribe((data: Discover) => {
+      console.log(data);
+      this.listFilmDiscover = data.results;
+    });
   }
 
 }
