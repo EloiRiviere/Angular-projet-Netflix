@@ -1,12 +1,27 @@
 <!--<div *ngFor="let film of listFilm">-->
 <!--  <img src='{{"https://image.tmdb.org/t/p/w500"+film.poster_path}}' alt="poster of film">-->
 <!--</div>-->
+<div class="modal"  *ngIf="isModalActive" [ngClass]="{ 'is-active' : isModalActive }">>
+  <div class="modal-background" (click)="toggleModal()"></div>
+  <div class="modal-card">
+    <header class="modal-card-head">
+      <p class="modal-card-title">{{tmpFilm.title}}</p>
+      <button class="delete" aria-label="close" (click)="toggleModal()"></button>
+    </header>
+    <section class="modal-card-body">
+      {{tmpFilm.overview}}
+    </section>
+    <footer class="modal-card-foot">
+      <button class="button play" routerLink="/{{tmpFilm.title}}">Lire</button>
+    </footer>
+  </div>
+</div>
 
 <!--Problème de rechargement des premières images en loop-->
-<carousel [loop]="true" [dots]="false" [arrows]="true" [arrowsOutside]="false" [counter]="false" [cellsToScroll]=3
+<carousel class="fix-background" [loop]="true" [dots]="false" [arrows]="true" [arrowsOutside]="false" [counter]="false" [cellsToScroll]=3
           [cellsToShow]=9 [overflowCellsLimit]=9>
   <div class="carousel-cell" *ngFor="let film of listFilm">
 <!--    <img src="./assets/netflix-icon.svg">-->
-    <img src='{{"https://image.tmdb.org/t/p/w500"+film.poster_path}}' alt="poster of film">
+    <img (click)="clickImage(film)" src='{{environment.imgSmallUrl}}{{film.poster_path}}' alt="poster of film">
   </div>
 </carousel>

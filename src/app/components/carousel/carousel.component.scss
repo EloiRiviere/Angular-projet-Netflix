@@ -6,7 +6,17 @@
 carousel {
     background-color: $netflix-black;
 }
-
+.modal-card-title {
+  font-weight: bold;
+}
+.modal-card, .modal-card-head, .modal-card-body, .modal-card-foot {
+  background-color: #212121 !important;
+}
+.play {
+  background-color: $netflix-black;
+  color: $netflix-red !important;
+  font-weight: bold;
+}
 // .carousel-arrow {
 //     background-color: $netflix-red !important;
 // }
@@ -14,3 +24,7 @@ carousel {
 // [_nghost-iyc-c16] .carousel-arrow[_ngcontent-iyc-c16] {
 //     background-color: $netflix-red !important;
 // }
+
+.fix-background {
+  z-index: auto;
+}

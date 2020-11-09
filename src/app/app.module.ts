@@ -14,6 +14,8 @@ import {VgControlsModule} from '@videogular/ngx-videogular/controls';
 import {VgOverlayPlayModule} from '@videogular/ngx-videogular/overlay-play';
 import {VgBufferingModule} from '@videogular/ngx-videogular/buffering';
 import {HttpClientModule} from '@angular/common/http';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import {SafePipe} from './model/safePipe';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,8 @@ import {HttpClientModule} from '@angular/common/http';
     FooterComponent,
     HomeComponent,
     FilmComponent,
-    CarouselComponent
+    CarouselComponent,
+    SafePipe
   ],
   imports: [
     BrowserModule,
@@ -32,7 +35,8 @@ import {HttpClientModule} from '@angular/common/http';
     VgControlsModule,
     VgOverlayPlayModule,
     VgBufferingModule,
-    HttpClientModule
+    HttpClientModule,
+    NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]
