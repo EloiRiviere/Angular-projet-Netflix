@@ -21,17 +21,10 @@
     "@angular/platform-browser": "~10.2.0",
     "@angular/platform-browser-dynamic": "~10.2.0",
     "@angular/router": "~10.2.0",
-<<<<<<< HEAD
-    "@videogular/ngx-videogular": "^2.1.0",
-    "angular-responsive-carousel": "^1.5.11",
-    "boostrap": "^2.0.0",
-    "bootstrap": "^4.5.3",
-=======
     "@ng-bootstrap/ng-bootstrap": "^8.0.0",
     "angular-responsive-carousel": "^1.5.11",
     "boostrap": "^2.0.0",
     "bootstrap": "^4.5.0",
->>>>>>> origin/commun
     "bulma": "^0.9.1",
     "bulma-carousel": "^4.0.4",
     "firebase": "^8.0.1",

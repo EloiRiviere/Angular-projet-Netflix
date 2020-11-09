@@ -6,20 +6,17 @@ import firebase from 'firebase';
 
 export const environment = {
   production: false,
-<<<<<<< HEAD
   firebase : {
-    apiKey: "AIzaSyDJR8SxMR6cfAj0M-K2WG6lG2gVI_cHHRo",
-    authDomain: "login-test-7a44e.firebaseapp.com",
-    databaseURL: "https://login-test-7a44e.firebaseio.com",
-    projectId: "login-test-7a44e",
-    storageBucket: "login-test-7a44e.appspot.com",
-    messagingSenderId: "942154828666",
-    appId: "1:942154828666:web:681fbbc9f9f868a96c64c3",
-    measurementId: "G-EMFF5VQRNY"
-  }
-=======
+    apiKey: 'AIzaSyDJR8SxMR6cfAj0M-K2WG6lG2gVI_cHHRo',
+    authDomain: 'login-test-7a44e.firebaseapp.com',
+    databaseURL: 'https://login-test-7a44e.firebaseio.com',
+    projectId: 'login-test-7a44e',
+    storageBucket: 'login-test-7a44e.appspot.com',
+    messagingSenderId: '942154828666',
+    appId: '1:942154828666:web:681fbbc9f9f868a96c64c3',
+    measurementId: 'G-EMFF5VQRNY'
+  },
   imgSmallUrl: 'https://image.tmdb.org/t/p/w500',
->>>>>>> origin/commun
 };
 
 /*

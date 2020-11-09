@@ -29,29 +29,19 @@ import { LoginComponent } from './components/login/login.component';
     HomeComponent,
     FilmComponent,
     CarouselComponent,
-<<<<<<< HEAD
-    LoginComponent
-=======
+    LoginComponent,
     SafePipe
->>>>>>> origin/commun
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     IvyCarouselModule,
-<<<<<<< HEAD
-    VgCoreModule,
-    VgControlsModule,
-    VgOverlayPlayModule,
-    VgBufferingModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireDatabaseModule,
     AngularFireAuthModule,
-    FormsModule
-=======
+    FormsModule,
     HttpClientModule,
     NgbModule
->>>>>>> origin/commun
   ],
   providers: [],
   bootstrap: [AppComponent]
