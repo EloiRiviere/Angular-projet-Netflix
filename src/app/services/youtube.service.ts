@@ -19,7 +19,7 @@ export class YoutubeService {
 
     return this.http.get(url).pipe(
       map((response: any) => response.items)
-    ).subscribe((items) => console.log('test', items[0].id.videoId));
+    );
   }
 
 }

@@ -10,20 +10,17 @@ import {DomSanitizer} from '@angular/platform-browser';
 })
 export class FilmComponent implements OnInit {
 
-  videoUrl = 'https://www.youtube.com/watch?v=';
+  videoUrl = 'https://www.youtube.com/embed/';
   title: string;
   url: any;
   videoId;
 
   constructor(private route: ActivatedRoute,
-              private youtubeService: YoutubeService,
-              private sanitizer: DomSanitizer) { }
+              private youtubeService: YoutubeService) { }
 
   ngOnInit(): void {
     this.title = this.route.snapshot.paramMap.get('film');
-    this.videoId = this.youtubeService.getVideo(this.title);
-    console.log(this.videoId);
-    this.url = this.videoUrl + this.videoId;
+    this.youtubeService.getVideo(this.title).subscribe((items) => this.url = this.videoUrl + items[0].id.videoId);
     console.log(this.url);
   }
 
