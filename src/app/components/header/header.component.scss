@@ -49,6 +49,15 @@ $navbar-item-hover-color: lightgrey;
     color: gray;
 }
 
-#search-icon {
+.svg-dark {
     filter: invert(90%);
+}
+
+.profile {
+    margin-left: 5px;
+}
+
+#profile-arrow {
+    height: 8px !important;
+    margin: 5px 0px 0px 7px;
 }
