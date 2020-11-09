@@ -3,7 +3,7 @@
 
   <!-- logo -->
   <div class="navbar-brand">
-    <a href="" class="navbar-item">
+    <a routerLink="/home" class="navbar-item">
       <img src="https://cdn.svgporn.com/logos/netflix.svg">
     </a>
   </div>
@@ -12,11 +12,11 @@
   <div class="navbar-menu">
 
     <div class="navbar-start">
-      <a href="" class="navbar-item">Accueil</a>
-      <a href="" class="navbar-item">Série</a>
-      <a href="" class="navbar-item">Films</a>
-      <a href="" class="navbar-item">Nouveautés</a>
-      <a href="" class="navbar-item">Ma liste</a>
+      <a routerLink="/home" class="navbar-item">Accueil</a>
+      <a routerLink="/home" class="navbar-item">Série</a>
+      <a routerLink="/home" class="navbar-item">Films</a>
+      <a routerLink="/home" class="navbar-item">Nouveautés</a>
+      <a routerLink="/home" class="navbar-item">Ma liste</a>
     </div>
 
     <div class="box-right">
@@ -30,10 +30,10 @@
           </span>
         </div>
 
-        <a href="" class="navbar-item">JEUNESSE</a>
+        <a routerLink="/home" class="navbar-item">JEUNESSE</a>
 
         <div class="navbar-item gift">
-          <a href="">
+          <a href="https://www.netflix.com/gift-cards">
             <span class="icon">
               <img class="svg-dark"
                    src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pg0KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDE5LjAuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPg0KPHN2ZyB2ZXJzaW9uPSIxLjEiIGlkPSJDYXBhXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB2aWV3Qm94PSIwIDAgNTEyIDUxMiIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgNTEyIDUxMjsiIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KPGc+DQoJPGc+DQoJCTxwYXRoIGQ9Ik00NjcsMTIwaC02MS4wNDFDNDE1LjM5NywxMDcuNDU2LDQyMSw5MS44NzEsNDIxLDc1YzAtNDEuMzU1LTMzLjY0NS03NS03NS03NWMtMjQuOTExLDAtNDMuMjgsOC45MjUtNTcuODA5LDI4LjA4Nw0KCQkJQzI3Ni4wMzYsNDQuMTE5LDI2Ny4xNDgsNjYuNTAzLDI1Niw5NC43ODVjLTExLjE0OC0yOC4yODMtMjAuMDM2LTUwLjY2Ni0zMi4xOTEtNjYuNjk4QzIwOS4yOCw4LjkyNSwxOTAuOTExLDAsMTY2LDANCgkJCWMtNDEuMzU1LDAtNzUsMzMuNjQ1LTc1LDc1YzAsMTYuODcxLDUuNjAzLDMyLjQ1NiwxNS4wNDEsNDVINDVjLTI0LjgxMywwLTQ1LDIwLjE4Ny00NSw0NXYzMGMwLDE5LjU1NSwxMi41NDEsMzYuMjI4LDMwLDQyLjQyDQoJCQlWNDY3YzAsMjQuODEzLDIwLjE4Nyw0NSw0NSw0NWgzNjJjMjQuODEzLDAsNDUtMjAuMTg3LDQ1LTQ1VjIzNy40MmMxNy40NTktNi4xOTIsMzAtMjIuODY1LDMwLTQyLjQydi0zMA0KCQkJQzUxMiwxNDAuMTg3LDQ5MS44MTMsMTIwLDQ2NywxMjB6IE0yODMuNTM0LDEwNi43NEMzMDYuNTEzLDQ4LjQ0MiwzMTUuMjQ5LDMwLDM0NiwzMGMyNC44MTMsMCw0NSwyMC4xODcsNDUsNDVzLTIwLjE4Nyw0NS00NSw0NQ0KCQkJaC02Ny43MTNDMjgwLjEyNSwxMTUuMzg1LDI4MS44NzgsMTEwLjk0MiwyODMuNTM0LDEwNi43NHogTTE2NiwzMGMzMC43NTEsMCwzOS40ODcsMTguNDQyLDYyLjQ2Niw3Ni43NA0KCQkJYzEuNjU2LDQuMjAyLDMuNDA5LDguNjQ1LDUuMjQ3LDEzLjI2SDE2NmMtMjQuODEzLDAtNDUtMjAuMTg3LTQ1LTQ1UzE0MS4xODcsMzAsMTY2LDMweiBNMTk2LDQ4Mkg3NWMtOC4yNzEsMC0xNS02LjcyOS0xNS0xNVYyNDANCgkJCWgxMzZWNDgyeiBNMTk2LDIxMEg0NWMtOC4yNzEsMC0xNS02LjcyOS0xNS0xNXYtMzBjMC04LjI3MSw2LjcyOS0xNSwxNS0xNWgxNTFWMjEweiBNMjg2LDQ4MmgtNjBWMTUwYzMuMTQzLDAsNDIuNzYsMCw2MCwwVjQ4MnoNCgkJCSBNNDUyLDQ2N2MwLDguMjcxLTYuNzI5LDE1LTE1LDE1SDMxNlYyNDBoMTM2VjQ2N3ogTTQ4MiwxOTVjMCw4LjI3MS02LjcyOSwxNS0xNSwxNUgzMTZ2LTYwaDE1MWM4LjI3MSwwLDE1LDYuNzI5LDE1LDE1VjE5NXoiLz4NCgk8L2c+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8L3N2Zz4NCg==" />
@@ -42,7 +42,7 @@
         </div>
 
         <div class="navbar-item bell">
-          <a href="">
+          <a routerLink="/home">
             <span class="icon">
               <img class="svg-dark"
                    src="data:image/svg+xml;base64,PHN2ZyBpZD0iQ2FwYV8xIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCA1MTIgNTEyIiBoZWlnaHQ9IjUxMiIgdmlld0JveD0iMCAwIDUxMiA1MTIiIHdpZHRoPSI1MTIiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0ibTQ1MC4yMDEgNDA3LjQ1M2MtMS41MDUtLjk3Ny0xMi44MzItOC45MTItMjQuMTc0LTMyLjkxNy0yMC44MjktNDQuMDgyLTI1LjIwMS0xMDYuMTgtMjUuMjAxLTE1MC41MTEgMC0uMTkzLS4wMDQtLjM4NC0uMDExLS41NzYtLjIyNy01OC41ODktMzUuMzEtMTA5LjA5NS04NS41MTQtMTMxLjc1NnYtMzQuNjU3YzAtMzEuNDUtMjUuNTQ0LTU3LjAzNi01Ni45NDItNTcuMDM2aC00LjcxOWMtMzEuMzk4IDAtNTYuOTQyIDI1LjU4Ni01Ni45NDIgNTcuMDM2djM0LjY1NWMtNTAuMzcyIDIyLjczNC04NS41MjUgNzMuNDk4LTg1LjUyNSAxMzIuMzM0IDAgNDQuMzMxLTQuMzcyIDEwNi40MjgtMjUuMjAxIDE1MC41MTEtMTEuMzQxIDI0LjAwNC0yMi42NjggMzEuOTM5LTI0LjE3NCAzMi45MTctNi4zNDIgMi45MzUtOS40NjkgOS43MTUtOC4wMSAxNi41ODYgMS40NzMgNi45MzkgNy45NTkgMTEuNzIzIDE1LjA0MiAxMS43MjNoMTA5Ljk0N2MuNjE0IDQyLjE0MSAzNS4wMDggNzYuMjM4IDc3LjIyMyA3Ni4yMzhzNzYuNjA5LTM0LjA5NyA3Ny4yMjMtNzYuMjM4aDEwOS45NDdjNy4wODIgMCAxMy41NjktNC43ODQgMTUuMDQyLTExLjcyMyAxLjQ1Ny02Ljg3MS0xLjY2OS0xMy42NTItOC4wMTEtMTYuNTg2em0tMjIzLjUwMi0zNTAuNDE3YzAtMTQuODgxIDEyLjA4Ni0yNi45ODcgMjYuOTQyLTI2Ljk4N2g0LjcxOWMxNC44NTYgMCAyNi45NDIgMTIuMTA2IDI2Ljk0MiAyNi45ODd2MjQuOTE3Yy05LjQ2OC0xLjk1Ny0xOS4yNjktMi45ODctMjkuMzA2LTIuOTg3LTEwLjAzNCAwLTE5LjgzMiAxLjAyOS0yOS4yOTYgMi45ODR2LTI0LjkxNHptMjkuMzAxIDQyNC45MTVjLTI1LjY3MyAwLTQ2LjYxNC0yMC42MTctNDcuMjIzLTQ2LjE4OGg5NC40NDVjLS42MDggMjUuNTctMjEuNTQ5IDQ2LjE4OC00Ny4yMjIgNDYuMTg4em02MC40LTc2LjIzOWMtLjAwMyAwLTIxMy4zODUgMC0yMTMuMzg1IDAgMi41OTUtNC4wNDQgNS4yMzYtOC42MjMgNy44NjEtMTMuNzk4IDIwLjEwNC0zOS42NDMgMzAuMjk4LTk2LjEyOSAzMC4yOTgtMTY3Ljg4OSAwLTYzLjQxNyA1MS41MDktMTE1LjAxIDExNC44MjEtMTE1LjAxczExNC44MjEgNTEuNTkzIDExNC44MjEgMTE1LjA2YzAgLjE4NS4wMDMuMzY5LjAxLjU1My4wNTcgNzEuNDcyIDEwLjI1IDEyNy43NTUgMzAuMjk4IDE2Ny4yODYgMi42MjUgNS4xNzYgNS4yNjcgOS43NTQgNy44NjEgMTMuNzk4eiIvPjwvc3ZnPg==" />
@@ -68,9 +68,9 @@
           </a>
           <div class="navbar-dropdown">
             <a class="navbar-item">"Nom de la personne"</a>
-            <a class="navbar-item">Centre d'aide</a>
+            <a href="https://help.netflix.com/fr" class="navbar-item">Centre d'aide</a>
             <hr class="navbar-divider">
-            <a class="navbar-item">Déconnecter</a>
+            <a routerLink="/logout" class="navbar-item">Déconnecter</a>
           </div>
         </div>
       </div>
