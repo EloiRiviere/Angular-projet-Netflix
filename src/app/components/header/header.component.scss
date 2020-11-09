@@ -1,0 +1,76 @@
+@import "/src/styles.scss";
+
+$navbar-height: 68px;
+$navbar-padding: 50px;
+$navbar-item-font-size: 14px;
+$navbar-item-hover-color: lightgrey;
+
+.navbar {
+  background-color: $netflix-black;
+  height: $navbar-height;
+  padding: 0px $navbar-padding;
+}
+
+.navbar-brand {
+  padding-right: $navbar-padding;
+}
+
+.navbar-item {
+  color: white;
+  font-size: $navbar-item-font-size;
+  height: $navbar-height;
+}
+
+.navbar-item:hover {
+  background-color: $netflix-black !important;
+  color: $navbar-item-hover-color !important;
+}
+
+.box-right {
+  float: left;
+}
+
+#magnifying-glass {
+  height: 100%;
+  margin-left: 14px;
+  padding: 5px;
+}
+
+.search-bar input{
+  background-color: black;
+  color: white !important;
+}
+
+.search-bar input:focus{
+  border-color: black;
+}
+
+.search-bar input::placeholder {
+  color: gray;
+}
+
+.svg-dark {
+  filter: invert(90%);
+}
+
+.profile {
+  margin-left: 5px;
+}
+
+#profile-arrow {
+  height: 8px !important;
+  margin: 5px 0px 0px 7px;
+}
+.navbar-dropdown{
+  margin-top: 100px;
+  margin-left: -500px;
+  background-color: $netflix-black;
+  opacity: 90%;
+  z-index: 500000000;
+}
+#image-profile{
+  border-radius: 5px;
+}
+a.navbar-link::after{
+  color: blanchedalmond !important;
+}
