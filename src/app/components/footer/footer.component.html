@@ -53,10 +53,20 @@
             <div class="column is-1"><a href=""></a></div>
             <div class="column is-4"></div>
     </div>
+
+    <script>
+        let myElement = document.getElementById("BtCodeService");
+        myElement.onclick = function() {
+            document.getElementById("BtCodeService").innerText = 'chaussure';
+        }
+    </script>
+
     <div class="columns">
         <div class="column is-4"></div>
         <div class="column is-1">
-            <button type="button" id="BtCodeService" onclick="CodeService()" class="CodeDeService">Code de service</button>
+            <!-- <button type="button" id="BtCodeService" class="CodeDeService" onclick="ChangeText()">Code de service</button> -->
+            <button type="submit" id="BtCodeService" class="CodeDeService" (click)="ChangeText()" >Code de service</button>
+
         </div>
         <div class="column is-1"></div>
         <div class="column is-1"></div>
