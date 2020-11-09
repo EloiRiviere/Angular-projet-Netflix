@@ -11,15 +11,11 @@ export class FooterComponent implements OnInit {
 
   constructor() { }
 
-  CodeService() {
-    this.CodeServiceText = '901 250'
-  }
-
   ngOnInit(): void {
   }
+  
+  ChangeText(){
+    document.getElementById("BtCodeService").innerText = "901 450";
+  }
 }
-// let BtCodeService = document.querySelector('BtCodeService');
 
-// BtCodeService.addEventListener('click', () => {
-//    BtCodeService.innerText = '901 050';
-//  }) 
