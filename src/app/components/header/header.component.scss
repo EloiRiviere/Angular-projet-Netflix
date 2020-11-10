@@ -68,11 +68,12 @@ $dropdown-item-hover-background-color:$netflix-black;
 
 .navbar-dropdown{
   width: 160px;
-  margin-top: 6px;
-  margin-left: -100px;
+  margin-top: 1px;
+  margin-left: -85px;
   background-color: $netflix-black;
   opacity: 95%;
   border-radius: 0px;
+  border-top-color: $netflix-black;
 }
 
 // .navbar-dropdown *:hover{
