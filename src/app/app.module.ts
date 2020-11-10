@@ -20,6 +20,7 @@ import { AngularFireAuthModule } from '@angular/fire/auth';
 import { FormsModule } from '@angular/forms';
 import { environment } from 'src/environments/environment';
 import { LoginComponent } from './components/login/login.component';
+import { LogoutComponent } from './components/logout/logout.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { LoginComponent } from './components/login/login.component';
     FilmComponent,
     CarouselComponent,
     LoginComponent,
-    SafePipe
+    SafePipe,
+    LogoutComponent
   ],
   imports: [
     BrowserModule,
