@@ -1,7 +1,9 @@
+@import "src/variables";
+
 footer {
     padding: 5px;
-    background-color: #141414;
-    color: #E5E5E5;
+    background-color: $netflix-black;
+    color: $netflix-white;
     bottom: 0;
     position: absolute;
     height: 400px;
@@ -9,10 +11,10 @@ footer {
 }
 a{
     margin-right: 15px;
-    background-color: #141414;
-    color : #E5E5E5;
+    background-color: $netflix-black;
+    color : $netflix-white;
 }
 button{
-    background-color: #141414;
-    color: #E5E5E5;
+    background-color: $netflix-black;
+    color: $netflix-white;
 }
