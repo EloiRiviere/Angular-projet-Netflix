@@ -12,11 +12,11 @@
   <div class="navbar-menu">
 
     <div class="navbar-start">
-      <a routerLink="/home" class="navbar-item">Accueil</a>
-      <a routerLink="/home" class="navbar-item">Série</a>
-      <a routerLink="/home" class="navbar-item">Films</a>
-      <a routerLink="/home" class="navbar-item">Nouveautés</a>
-      <a routerLink="/home" class="navbar-item">Ma liste</a>
+      <a href="#partie1" class="navbar-item">Accueil</a> <!--routerLink="/home"-->
+      <a href="#partie2" class="navbar-item">Série</a>
+      <a href="#partie3" class="navbar-item">Films</a>
+      <a href="#partie4" class="navbar-item">Nouveautés</a>
+      <a href="#partie5" class="navbar-item">Ma liste</a>
     </div>
 
     <div class="box-right">
@@ -77,3 +77,20 @@
     </div>
   </div>
 </nav>
+
+<script src="https://code.jquery.com/jquery-3.5.0.min.js"></script>
+<script>
+  let $root = $('html, body');
+  $('a[href^="#"]').click(function() {
+      let href = $.attr(this, 'href');
+      $root.animate({
+        scrollTop: $(href).offset().top
+      }, 500, function() {
+        window.location.hash = href;
+      });
+      return false;
+    });
+</script>
+
+<!-- <script src="../../js/jquery-3.1.1.min.js"> </script>
+<script src="../../js/scroll.js"> </script> -->
