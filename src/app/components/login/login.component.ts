@@ -9,6 +9,9 @@ import { Router} from '@angular/router';
 })
 export class LoginComponent implements OnInit {
 
+  email;
+  password;
+
   constructor(private auth: AuthService, private route: Router) {
 
   }
@@ -24,8 +27,17 @@ export class LoginComponent implements OnInit {
       this.route.navigate(['/home']);
     }
   }
+  
+  // signIn() {
 
-  loginGoogle(){
+  // }
+
+  // loginWithoutGoogle() {
+  //   this.auth.login(this.email, this.password);
+  //   this.route.navigate(['/home']);
+  // }
+
+  loginWithGoogle() {
     this.auth.loginGoogle();
     if(this.auth.isLoggedIn()){
       this.route.navigate(['/home']);
