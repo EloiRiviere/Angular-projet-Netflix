@@ -34,15 +34,11 @@ export class LoginComponent implements OnInit {
 
   signInWithGoogle(){
     this.auth.signinGoogle();
-    if(this.auth.isLoggedIn()){
-      this.route.navigate(['/home']);
-    }
+    this.route.navigate(['/home']);
   }
 
   loginWithGoogle() {
     this.auth.loginGoogle();
-    if(this.auth.isLoggedIn()){
-      this.route.navigate(['/home']);
-    }
+    this.route.navigate(['/home']);
   }
 }
