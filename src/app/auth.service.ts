@@ -69,7 +69,7 @@ export class AuthService {
     }
 
     logout(){
-        this.afAuth.signOut();
+        firebase.default.auth().signOut();
         alert("Disconnected");
         console.log(firebase.default.auth().currentUser);
     }
