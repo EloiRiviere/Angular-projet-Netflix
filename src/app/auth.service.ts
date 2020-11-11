@@ -76,7 +76,6 @@ export class AuthService {
 
     logout(){
         firebase.default.auth().signOut();
-        console.log(firebase.default.auth().currentUser);
     }
 
     getFavoris(){
@@ -89,7 +88,6 @@ export class AuthService {
         user = data.filter(d => d.email = firebase.default.auth().currentUser.email)[0];
         let list;
         if (user.bookmarks !== undefined) {
-          console.log(user.bookmarks);
           list = user.bookmarks;
         } else {
           list = [];

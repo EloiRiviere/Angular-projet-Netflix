@@ -67,7 +67,6 @@ export class HomeComponent implements OnInit {
   favoris(){
     this.authService.getFavoris().subscribe(data => {
       const user: User = data.filter(d => d.email = firebase.default.auth().currentUser.email)[0];
-      console.log(user);
       this.listFilmFavoris = user.bookmarks;
     });
   }
