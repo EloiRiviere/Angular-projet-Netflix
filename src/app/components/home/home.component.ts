@@ -35,7 +35,7 @@ export class HomeComponent implements OnInit {
   listFilmThriller: any;
   listFilmGuerre: any;
   listFilmWestern: any;
-  listFilmFavoris;
+  listFilmFavoris = [];
 
   constructor(private filmService: FilmService, private auth: AuthService, private route : Router, private authService: AuthService) { }
 
@@ -67,7 +67,7 @@ export class HomeComponent implements OnInit {
   favoris(){
     this.authService.getFavoris().subscribe(data => {
       const user: User = data.filter(d => d.email = firebase.default.auth().currentUser.email)[0];
-      this.listFilmFavoris = user.bookmarks;
+      this.listFilmFavoris.push(user.bookmarks);
     });
   }
 
