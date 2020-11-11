@@ -8,6 +8,8 @@ import { FooterComponent } from './components/footer/footer.component';
 import { HomeComponent } from './components/home/home.component';
 import { FilmComponent } from './components/film/film.component';
 import { CarouselComponent } from './components/carousel/carousel.component';
+import { LoginComponent } from './components/login/login.component';
+import { LogoutComponent } from './components/logout/logout.component';
 
 import {IvyCarouselModule} from 'angular-responsive-carousel';
 import {HttpClientModule} from '@angular/common/http';
@@ -19,8 +21,6 @@ import { AngularFireDatabaseModule } from '@angular/fire/database';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 import { FormsModule } from '@angular/forms';
 import { environment } from 'src/environments/environment';
-import { LoginComponent } from './components/login/login.component';
-import { LogoutComponent } from './components/logout/logout.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +32,8 @@ import { LogoutComponent } from './components/logout/logout.component';
     CarouselComponent,
     LoginComponent,
     SafePipe,
-    LogoutComponent
+    LogoutComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,

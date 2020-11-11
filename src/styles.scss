@@ -2,11 +2,9 @@
 @import "~bulma/css/bulma.css";
 @import "~bootstrap/dist/css/bootstrap.min.css";
 @import '~bootstrap/scss/bootstrap';
-
-$netflix-black: #141414;
-$netflix-red: #E50914;
+@import "src/variables";
 
 * {
-    font-family: Helvetica, Arial, sans-serif;
-    color: #ffffff !important;
+  font-family: Helvetica, Arial, sans-serif;
+  color: #ffffff !important;
 }
