@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {FilmService} from '../../services/film.service';
 import {Discover} from '../../model/film';
 import { AuthService } from 'src/app/auth.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -12,11 +13,11 @@ export class HomeComponent implements OnInit {
 
   listFilmDiscover;
 
-  constructor(private filmService: FilmService, private auth: AuthService) { }
+  constructor(private filmService: FilmService, private auth: AuthService, private route : Router) { }
 
   ngOnInit(): void {  
-    if(this.auth.isLoggedIn()){
-      this.discover;
+    if(!this.auth.isLoggedIn()){
+      this.route.navigate(['']);
     }
     this.discover();
   }

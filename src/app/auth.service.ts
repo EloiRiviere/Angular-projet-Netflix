@@ -13,30 +13,18 @@ import { User } from './model/user.model';
 export class AuthService {
     userData: any;
     
-    constructor(private afAuth : AngularFireAuth, private router : Router){ }      
+    constructor(private afAuth : AngularFireAuth, private route : Router){ }      
     
     isLoggedIn(){
+        var user = firebase.default.auth().currentUser
         var loggedIn = false; 
-        firebase.default.auth().onAuthStateChanged(function(user){
-            if(user){
-                loggedIn = true; 
-            }
-            
-        });
-        return loggedIn;
-    }
 
-    SetUserData(user) {
-        const userRef: AngularFirestoreDocument<any> = this.afs.doc(`users/${user.uid}`);
-        const userData: User = {
-          id: user.uid,
-          email: user.email,
-          password: user.password,
-          bookmarks: null
+        if(user){
+            console.log(user.email);
+            loggedIn = true; 
         }
-        return userRef.set(userData, {
-          merge: true
-        })
+        
+        return loggedIn;
     }
 
     createUser(email:string, password:string){
@@ -49,16 +37,13 @@ export class AuthService {
     }
 
     login(email:string, password:string){
-        return this.afAuth.signInWithEmailAndPassword(email, password)
+        this.afAuth.signInWithEmailAndPassword(email, password)
         .catch(function(error) {
             // Handle Errors here.
             var errorCode = error.code;
             var errorMessage = error.message;   
-            // ...
+            console.log("Error : " + errorMessage);
         })
-        .then(() => {
-            //this.router.navigate(['/home']);
-        });
     }
 
     loginGoogle(){
@@ -67,11 +52,8 @@ export class AuthService {
             // Handle Errors here.
             var errorCode = error.code;
             var errorMessage = error.message;   
-            // ...
+            console.log("Error : " + errorMessage);
         })
-        .then(() => {
-            this.router.navigate(['/home']);
-        });
     }
 
     logout(){
