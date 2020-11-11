@@ -1,36 +1,35 @@
-import { FilmComponent } from 'src/app/components/film/film.component';
-
 export class User{
 
-    pseudo: string;
-    mail: string;
-    password: string; 
-    bookmarks: Array<FilmComponent>; //May change 
+  id: string;
+  email: string;
+  password: string;
+  bookmarks: Array<string>;
 
-    constructor(pseudo:string, mail:string, password:string){
-        this.pseudo = pseudo;
-        this.mail = mail; 
-        this.password = password;
-    }
+  constructor(email: string, password: string){
+    // this.id = id;
+    this.id = null;
+    this.email = email;
+    this.password = password;
+    this.bookmarks = [];
+  }
 
-    getPseudo(){
-        return this.pseudo;
-    }
+  getId(){
+    return this.id;
+  }
 
-    checkPassword(password:string){
-        if(this.password == password){
-            return true;
-        }
-        return false; 
-    }
+  getEmail(){
+    return this.email;
+  }
 
-    addBookmark(film:FilmComponent){
-        this.bookmarks.push(film);
-    }
+  checkPassword(password: string){
+    return this.password == password;
+  }
 
-    deleteBookmark(film:FilmComponent){
-        this.bookmarks.splice(this.bookmarks.indexOf(film), 1);
-    }
+  addBookmark(film: string){
+    this.bookmarks.push(film);
+  }
 
-    
+  deleteBookmark(film: string){
+    this.bookmarks.splice(this.bookmarks.indexOf(film), 1);
+  }
 }

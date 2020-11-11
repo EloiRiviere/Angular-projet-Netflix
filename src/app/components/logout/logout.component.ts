@@ -14,6 +14,7 @@ export class LogoutComponent implements OnInit {
 
   ngOnInit(): void {
     this.auth.logout();
+    alert("Disconnected.");
     this.route.navigate(['']);
   }
 
