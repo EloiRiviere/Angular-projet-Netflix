@@ -6,24 +6,30 @@ import { Router } from '@angular/router';
 import * as firebase from 'firebase';
 import { Observable } from 'rxjs';
 import { User } from './model/user.model';
+import {AngularFireDatabase, AngularFireList} from '@angular/fire/database';
 
 @Injectable({
     providedIn : 'root'
 })
 
 export class AuthService {
-    userData: any;
-    
-    constructor(private afAuth : AngularFireAuth, private route : Router){ }      
-    
+  userData: any;
+  private dbPath = '/user';
+  dbRef: AngularFireList<User> = null;
+
+  constructor(private afAuth: AngularFireAuth,
+              private route: Router,
+              private db: AngularFireDatabase) {
+    this.dbRef = db.list(this.dbPath);
+  }
     isLoggedIn(){
         var user = firebase.default.auth().currentUser
-        var loggedIn = false; 
+        var loggedIn = false;
 
         if(user){
-            loggedIn = true; 
+            loggedIn = true;
         }
-        
+
         return loggedIn;
     }
 
@@ -34,6 +40,7 @@ export class AuthService {
             var errorMessage = error.message;
             alert("Error : " + errorMessage);
         });
+        this.dbRef.push(new User(email, password));
     }
 
     login(email:string, password:string){
@@ -41,10 +48,10 @@ export class AuthService {
         .catch(function(error) {
             // Handle Errors here.
             var errorCode = error.code;
-            var errorMessage = error.message;   
+            var errorMessage = error.message;
             alert("Error : " + errorMessage);
             console.log("Error : " + errorMessage);
-        })
+        });
     }
 
     signinGoogle(){
@@ -52,9 +59,9 @@ export class AuthService {
         .catch(function(error) {
             // Handle Errors here.
             var errorCode = error.code;
-            var errorMessage = error.message;   
+            var errorMessage = error.message;
             console.log("Error : " + errorMessage);
-        })
+        });
     }
 
     loginGoogle(){
@@ -62,9 +69,9 @@ export class AuthService {
         .catch(function(error) {
             // Handle Errors here.
             var errorCode = error.code;
-            var errorMessage = error.message;   
+            var errorMessage = error.message;
             console.log("Error : " + errorMessage);
-        })
+        });
     }
 
     logout(){
