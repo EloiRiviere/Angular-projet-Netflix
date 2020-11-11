@@ -9,6 +9,9 @@ import { Router} from '@angular/router';
 })
 export class LoginComponent implements OnInit {
 
+  email;
+  password;
+
   constructor(private auth: AuthService, private route: Router) {
   }
 
@@ -16,12 +19,16 @@ export class LoginComponent implements OnInit {
     this.auth.createUser("dyeallow@gmail.com","siong123");
   }
 
-  login(email:string, password:string) {
-    this.auth.login(email, password);
+  signIn() {
+
+  }
+
+  loginWithoutGoogle() {
+    this.auth.login(this.email, this.password);
     this.route.navigate(['/home']);
   }
 
-  loginGoogle(){
+  loginWithGoogle() {
     this.auth.loginGoogle();
     this.route.navigate(['/home']);
   }

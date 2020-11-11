@@ -1,24 +1,34 @@
-<!-- <section class="fond">
-    <div class="voile" > -->
-        <div class="is-centered">
-            <fieldset>
-                <!-- <legend>Choose your favorite monster</legend> -->
-                <label>S'identifier <br> </label>
-                <!-- <input type="text" id="email" name="identification"> -->
-                <input #userLoginId type="text" data-uia="login-field" name="userLoginId" class="nfTextField error" id="id_userLoginId" value="" tabindex="0" autocomplete="email" placeholder="Votre adresse mail" dir="">
-                <br/>
-            
-                <!-- <input type="text" id="mdp" name="identification"><br/> -->
-                <input #password type="password" data-uia="password-field" name="password" class="nfTextField error" id="id_password" value="" tabindex="0" autocomplete="Mot de passe" placeholder="Mot de passe" dir="">
-                <br>
-                <button (click)="login(userLoginId.value, password.value)" type="submit" class="button btcolor">Envoyer</button>
-                <!-- <input type="button" id="submit" name="monster"> -->
-                <br>
+<section class="column fond">
+  <div class="column is-3 voile" >
+    <div>
+      <label class="">S'identifier</label>
+    </div>
+    <div>
+      <input [(ngModel)]="email" type="text" name="userLoginId" class="" id="id_userLoginId" autocomplete placeholder="Votre adresse mail">
+    </div>
 
-                <input type="checkbox" >
-              </fieldset>
-        </div>
-    <!-- </div>
-</section> -->
+    <div>
+      <input [(ngModel)]="password" type="password" name="password" class="" id="id_password" autocomplete placeholder="Mot de passe">
+    </div>
 
-<button (click)="loginGoogle()" class="btn btn-primary">Connexion avec Google</button>
+    <div>
+      <button (click)="loginWithoutGoogle()" class="button btcolor">S'identifier</button>
+    </div>
+
+    <div>
+      <button (click)="loginWithGoogle()" class="button btcolor">Connexion avec Google</button>
+    </div>
+
+    <div>
+      <button (click)="signIn()" class="button btcolor">S'inscrire</button>
+    </div>
+
+    <div>
+      <label class="checkbox is-vertical-center">
+        <input type="checkbox">
+        Se souvenir de moi
+      </label>
+    </div>
+
+  </div>
+</section>
