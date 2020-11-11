@@ -21,7 +21,6 @@ export class AuthService {
         var loggedIn = false; 
 
         if(user){
-            console.log(user.email);
             loggedIn = true; 
         }
         
@@ -34,7 +33,7 @@ export class AuthService {
             var errorCode = error.code;
             var errorMessage = error.message;
             alert("Error : " + errorMessage);
-          });
+        });
     }
 
     login(email:string, password:string){
@@ -70,7 +69,6 @@ export class AuthService {
 
     logout(){
         firebase.default.auth().signOut();
-        alert("Disconnected");
         console.log(firebase.default.auth().currentUser);
     }
 }

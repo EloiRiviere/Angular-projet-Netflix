@@ -13,7 +13,6 @@ export class LoginComponent implements OnInit {
   password;
 
   constructor(private auth: AuthService, private route: Router) {
-
   }
 
   ngOnInit(): void {
@@ -22,7 +21,6 @@ export class LoginComponent implements OnInit {
   signIn(email:string, password:string) {
     this.auth.createUser(email, password);
     if(this.auth.isLoggedIn()){
-      // alert("Utilisateur créé avec succès.");
       this.route.navigate(['/home']);
     }
   }
