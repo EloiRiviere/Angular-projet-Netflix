@@ -1,6 +1,7 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {NgbModal, NgbModalRef} from '@ng-bootstrap/ng-bootstrap';
 import {environment} from '../../../environments/environment';
+import {AuthService} from '../../auth.service';
 
 
 @Component({
@@ -17,7 +18,7 @@ export class CarouselComponent implements OnInit {
   isModalActive: boolean = false;
 
 
-  constructor(private modalService: NgbModal) { }
+  constructor(private modalService: NgbModal, private authService: AuthService) { }
 
   ngOnInit(): void {
   }
@@ -27,8 +28,11 @@ export class CarouselComponent implements OnInit {
   }
 
   clickImage(film) {
-    console.log(film);
     this.tmpFilm = film;
     this.toggleModal();
+  }
+
+  addFavoris() {
+    this.authService.addFavoris(this.tmpFilm);
   }
 }

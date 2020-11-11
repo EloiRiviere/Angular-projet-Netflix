@@ -23,7 +23,7 @@ export class AuthService {
     this.dbRef = db.list(this.dbPath);
   }
     isLoggedIn(){
-        var user = firebase.default.auth().currentUser
+        var user = firebase.default.auth().currentUser;
         var loggedIn = false;
 
         if(user){
@@ -40,7 +40,7 @@ export class AuthService {
             var errorMessage = error.message;
             alert("Error : " + errorMessage);
         });
-        this.dbRef.push(new User(email, password));
+        this.dbRef.set(email.replace('.', '_').toString(), new User(email, password));
     }
 
     login(email:string, password:string){
@@ -77,5 +77,25 @@ export class AuthService {
     logout(){
         firebase.default.auth().signOut();
         console.log(firebase.default.auth().currentUser);
+    }
+
+    getFavoris(){
+      return this.dbRef.valueChanges();
+    }
+
+  addFavoris(tmpFilm: any){
+      this.dbRef.valueChanges().subscribe(data => {
+        let user: User;
+        user = data.filter(d => d.email = firebase.default.auth().currentUser.email)[0];
+        let list;
+        if (user.bookmarks !== undefined) {
+          console.log(user.bookmarks);
+          list = user.bookmarks;
+        } else {
+          list = [];
+        }
+        this.dbRef.update(firebase.default.auth().currentUser.email.replace('.', '_') + '/bookmarks', tmpFilm);
+        // this.dbRef.update(firebase.default.auth().currentUser.email.replace('.', '_') + '/bookmarks', list);
+      });
     }
 }
