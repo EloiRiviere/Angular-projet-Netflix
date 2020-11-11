@@ -19,9 +19,6 @@ export class FilmComponent implements OnInit {
               private youtubeService: YoutubeService, private auth: AuthService, private router : Router) { }
 
   ngOnInit(): void {
-    if(!this.auth.isLoggedIn()){
-      this.router.navigate(['']);
-    }
     this.title = this.route.snapshot.paramMap.get('film');
     this.youtubeService.getVideo(this.title).subscribe((items) => this.url = this.videoUrl + items[0].id.videoId);
   }
