@@ -17,25 +17,29 @@ export class LoginComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    // this.auth.createUser("dyeallow@gmail.com","siong123");
+  }
+
+  signIn(email:string, password:string) {
+    this.auth.createUser(email, password);
+    if(this.auth.isLoggedIn()){
+      // alert("Utilisateur créé avec succès.");
+      this.route.navigate(['/home']);
+    }
   }
 
   login(email:string, password:string) {
     this.auth.login(email, password);
     if(this.auth.isLoggedIn()){
-      console.log("true");
       this.route.navigate(['/home']);
     }
   }
-  
-  // signIn() {
 
-  // }
-
-  // loginWithoutGoogle() {
-  //   this.auth.login(this.email, this.password);
-  //   this.route.navigate(['/home']);
-  // }
+  signInWithGoogle(){
+    this.auth.signinGoogle();
+    if(this.auth.isLoggedIn()){
+      this.route.navigate(['/home']);
+    }
+  }
 
   loginWithGoogle() {
     this.auth.loginGoogle();

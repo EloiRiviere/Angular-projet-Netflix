@@ -1,5 +1,6 @@
 import { newArray } from '@angular/compiler/src/util';
 import { Injectable } from '@angular/core';
+import { FirebaseApp } from '@angular/fire';
 import { AngularFireAuth } from '@angular/fire/auth';
 import { Router } from '@angular/router';
 import * as firebase from 'firebase';
@@ -32,12 +33,23 @@ export class AuthService {
             // Handle Errors here.
             var errorCode = error.code;
             var errorMessage = error.message;
-            // ...
+            alert("Error : " + errorMessage);
           });
     }
 
     login(email:string, password:string){
         this.afAuth.signInWithEmailAndPassword(email, password)
+        .catch(function(error) {
+            // Handle Errors here.
+            var errorCode = error.code;
+            var errorMessage = error.message;   
+            alert("Error : " + errorMessage);
+            console.log("Error : " + errorMessage);
+        })
+    }
+
+    signinGoogle(){
+        return this.afAuth.signInWithRedirect(new firebase.default.auth.GoogleAuthProvider())
         .catch(function(error) {
             // Handle Errors here.
             var errorCode = error.code;
@@ -58,5 +70,7 @@ export class AuthService {
 
     logout(){
         this.afAuth.signOut();
+        alert("Disconnected");
+        console.log(firebase.default.auth().currentUser);
     }
 }

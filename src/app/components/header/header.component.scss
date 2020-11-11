@@ -4,11 +4,13 @@ $navbar-height: 68px;
 $navbar-padding: 50px;
 $navbar-item-font-size: 14px;
 $navbar-item-hover-color: lightgrey;
+$dropdown-item-hover-background-color:$netflix-black;
 
 .navbar {
   background-color: $netflix-black;
   height: $navbar-height;
   padding: 0px $navbar-padding;
+  height: 80px;
 }
 
 .navbar-brand {
@@ -24,6 +26,7 @@ $navbar-item-hover-color: lightgrey;
 .navbar-item:hover {
   background-color: $netflix-black !important;
   color: $navbar-item-hover-color !important;
+  outline: none !important;
 }
 
 .box-right {
@@ -39,10 +42,11 @@ $navbar-item-hover-color: lightgrey;
 .search-bar input{
   background-color: black;
   color: white !important;
+  width: 190px;
 }
 
 .search-bar input:focus{
-  border-color: black;
+  border-color: lightgrey;
 }
 
 .search-bar input::placeholder {
@@ -61,13 +65,25 @@ $navbar-item-hover-color: lightgrey;
   height: 8px !important;
   margin: 5px 0px 0px 7px;
 }
+
 .navbar-dropdown{
-  margin-top: 100px;
-  margin-left: -500px;
+  width: 160px;
+  margin-top: 1px;
+  margin-left: -85px;
   background-color: $netflix-black;
-  opacity: 90%;
-  z-index: 500000000;
+  opacity: 95%;
+  border-radius: 0px;
+  border-top-color: $netflix-black;
 }
+
+// .navbar-dropdown *:hover{
+//   background-color:red;
+// }
+
+.navbar-divider {
+  height: 1px;
+}
+
 #image-profile{
   border-radius: 5px;
 }
