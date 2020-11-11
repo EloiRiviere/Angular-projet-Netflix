@@ -18,7 +18,7 @@ $dropdown-item-hover-background-color:$netflix-black;
 }
 
 .navbar-item {
-  color: white;
+  color:$netflix-white!important;
   font-size: $navbar-item-font-size;
   height: $navbar-height;
 }

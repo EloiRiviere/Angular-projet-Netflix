@@ -3,10 +3,11 @@
 footer {
     padding: 5px;
     background-color: $netflix-black;
-    color: $netflix-white;
+    color: red !important;
     position: absolute;
     height: 400px;
     width: 100%;
+    font-size: 12px;
 }
 a{
     margin-right: 15px;
