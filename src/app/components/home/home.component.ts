@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {FilmService} from '../../services/film.service';
 import {Discover} from '../../model/film';
+import { AuthService } from 'src/app/auth.service';
 
 @Component({
   selector: 'app-home',
@@ -11,9 +12,12 @@ export class HomeComponent implements OnInit {
 
   listFilmDiscover;
 
-  constructor(private filmService: FilmService) { }
+  constructor(private filmService: FilmService, private auth: AuthService) { }
 
-  ngOnInit(): void {
+  ngOnInit(): void {  
+    if(this.auth.isLoggedIn()){
+      this.discover;
+    }
     this.discover();
   }
 

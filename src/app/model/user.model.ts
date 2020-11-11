@@ -2,19 +2,23 @@ import { FilmComponent } from 'src/app/components/film/film.component';
 
 export class User{
 
-    pseudo: string;
-    mail: string;
+    id: string;
+    email: string;
     password: string; 
     bookmarks: Array<FilmComponent>; //May change 
 
-    constructor(pseudo:string, mail:string, password:string){
-        this.pseudo = pseudo;
-        this.mail = mail; 
+    constructor(id:string, email:string, password:string){
+        this.id = id;
+        this.email = email; 
         this.password = password;
     }
 
-    getPseudo(){
-        return this.pseudo;
+    getId(){
+        return this.id;
+    }
+
+    getEmail(){
+        return this.email;
     }
 
     checkPassword(password:string){

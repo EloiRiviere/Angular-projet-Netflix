@@ -5,13 +5,13 @@
                 <!-- <legend>Choose your favorite monster</legend> -->
                 <label>S'identifier <br> </label>
                 <!-- <input type="text" id="email" name="identification"> -->
-                <input type="text" data-uia="login-field" name="userLoginId" class="nfTextField error" id="id_userLoginId" value="" tabindex="0" autocomplete="email" placeholder="Votre adresse mail" dir="">
+                <input #userLoginId type="text" data-uia="login-field" name="userLoginId" class="nfTextField error" id="id_userLoginId" value="" tabindex="0" autocomplete="email" placeholder="Votre adresse mail" dir="">
                 <br/>
             
                 <!-- <input type="text" id="mdp" name="identification"><br/> -->
-                <input type="password" data-uia="password-field" name="password" class="nfTextField error" id="id_password" value="" tabindex="0" autocomplete="Mot de passe" placeholder="Mot de passe" dir="">
+                <input #password type="password" data-uia="password-field" name="password" class="nfTextField error" id="id_password" value="" tabindex="0" autocomplete="Mot de passe" placeholder="Mot de passe" dir="">
                 <br>
-                <button type="submit" class="button btcolor">Envoyer</button>
+                <button (click)="login(userLoginId.value, password.value)" type="submit" class="button btcolor">Envoyer</button>
                 <!-- <input type="button" id="submit" name="monster"> -->
                 <br>
 
@@ -21,4 +21,4 @@
     <!-- </div>
 </section> -->
 
-<button (click)="login()" class="btn btn-primary">Connexion avec Google</button>
+<button (click)="loginGoogle()" class="btn btn-primary">Connexion avec Google</button>
