@@ -9,14 +9,36 @@ import { Router} from '@angular/router';
 })
 export class LoginComponent implements OnInit {
 
-  constructor(private auth: AuthService,
-              private route: Router) { }
+  email;
+  password;
+
+  constructor(private auth: AuthService, private route: Router) {
+  }
 
   ngOnInit(): void {
   }
 
-  login() {
-    this.auth.login();
+  signIn(email:string, password:string) {
+    this.auth.createUser(email, password);
+    if(this.auth.isLoggedIn()){
+      this.route.navigate(['/home']);
+    }
+  }
+
+  login(email:string, password:string) {
+    this.auth.login(email, password);
+    if(this.auth.isLoggedIn()){
+      this.route.navigate(['/home']);
+    }
+  }
+
+  signInWithGoogle(){
+    this.auth.signinGoogle();
+    this.route.navigate(['/home']);
+  }
+
+  loginWithGoogle() {
+    this.auth.loginGoogle();
     this.route.navigate(['/home']);
   }
 }
