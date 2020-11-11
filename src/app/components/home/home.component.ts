@@ -40,9 +40,6 @@ export class HomeComponent implements OnInit {
   constructor(private filmService: FilmService, private auth: AuthService, private route : Router, private authService: AuthService) { }
 
   ngOnInit(): void {
-    if(!this.auth.isLoggedIn()){
-      this.route.navigate(['']);
-    }
     this.discover();
     this.rated();
     this.upcoming();
