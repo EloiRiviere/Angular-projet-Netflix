@@ -5,7 +5,7 @@ import { AngularFireAuth } from '@angular/fire/auth';
 import { Router } from '@angular/router';
 import * as firebase from 'firebase';
 import { Observable } from 'rxjs';
-import { User } from './model/user.model';
+import { User } from '../model/user.model';
 import {AngularFireDatabase, AngularFireList} from '@angular/fire/database';
 
 @Injectable({

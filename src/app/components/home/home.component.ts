@@ -1,7 +1,7 @@
 import {ChangeDetectorRef, Component, OnInit} from '@angular/core';
 import {FilmService} from '../../services/film.service';
 import {Discover} from '../../model/film';
-import { AuthService } from 'src/app/auth.service';
+import { AuthService } from 'src/app/services/auth.service';
 import { Router } from '@angular/router';
 import {User} from '../../model/user.model';
 import * as firebase from 'firebase';

@@ -1,7 +1,7 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {NgbModal, NgbModalRef} from '@ng-bootstrap/ng-bootstrap';
 import {environment} from '../../../environments/environment';
-import {AuthService} from '../../auth.service';
+import {AuthService} from '../../services/auth.service';
 
 
 @Component({

@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import {HomeComponent} from './components/home/home.component';
 import {FilmComponent} from './components/film/film.component';
-import { AuthService } from './auth.service';
+import { AuthService } from './services/auth.service';
 import { LoginComponent } from './components/login/login.component';
 import {LogoutComponent} from './components/logout/logout.component';
 
