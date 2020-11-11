@@ -44,7 +44,7 @@ export class AuthService {
     }
 
     login(email:string, password:string){
-        this.afAuth.signInWithEmailAndPassword(email, password)
+        firebase.default.auth().signInWithEmailAndPassword(email, password)
         .catch(function(error) {
             // Handle Errors here.
             var errorCode = error.code;
@@ -55,7 +55,7 @@ export class AuthService {
     }
 
     signinGoogle(){
-        return this.afAuth.signInWithRedirect(new firebase.default.auth.GoogleAuthProvider())
+        firebase.default.auth().signInWithRedirect(new firebase.default.auth.GoogleAuthProvider())
         .catch(function(error) {
             // Handle Errors here.
             var errorCode = error.code;
@@ -65,7 +65,7 @@ export class AuthService {
     }
 
     loginGoogle(){
-        return this.afAuth.signInWithRedirect(new firebase.default.auth.GoogleAuthProvider())
+        firebase.default.auth().signInWithRedirect(new firebase.default.auth.GoogleAuthProvider())
         .catch(function(error) {
             // Handle Errors here.
             var errorCode = error.code;
